@@ -13,7 +13,7 @@ class DoacaoController extends Controller
     public function index(){
 
         $instituicoes = Instituicao::all();
-        return view('doacao.form-doacao', ['instituicoes' => $instituicoes]);
+        return view('doacao.form-doacao', ['instituicoes' => $instituicoes, 'title' => 'doações']);
     }
 
     public function doar(Request $request){

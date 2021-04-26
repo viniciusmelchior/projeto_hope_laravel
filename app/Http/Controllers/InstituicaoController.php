@@ -10,7 +10,7 @@ class InstituicaoController extends Controller
 {
     public function index(){
         //mostra form
-        return view('instituicao.form-cadastro');
+        return view('instituicao.form-cadastro',['title' => 'Cadastrar Instituição']);
     }
 
     public function cadastrar(Request $request){

@@ -38,7 +38,8 @@ class UsuarioController extends Controller
 
         $user = User::where('id','=',session('LoggedUser'))->first();
         $data = [
-            'LoggedUserInfo' =>$user
+            'LoggedUserInfo' =>$user,
+            'title' => 'Editar Usuário'
         ];
         return view('usuario.form-usuario-editar', $data);
     }
