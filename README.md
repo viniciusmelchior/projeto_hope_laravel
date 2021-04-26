@@ -2,7 +2,7 @@
 
 - criar banco de dados
 
-- configurar env.exemple (renomear para .env) e colocar especificações local (nome do banco, usuario, senha)
+- configurar env.exemple (renomear para .env) e colocar especificações locais (nome do banco, usuario, senha)
 
  - na pasta do projeto digitar ->
 
