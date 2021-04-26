@@ -16,8 +16,30 @@ class DoacaoController extends Controller
         return view('doacao.form-doacao', ['instituicoes' => $instituicoes, 'title' => 'doações']);
     }
 
+    public function minhasDoacoes(){
+
+        //enviar dados para view
+        if(session()->has('LoggedUser')){
+            $user = User::where('id','=',session('LoggedUser'))->first();
+            $doacoes = Doacao::where('doador', $user->id)->get();
+            $data = [
+                'LoggedUserInfo' =>$user,
+                'doacoes' => $doacoes
+            ];
+        }
+
+    return view('doacao.minhas-doacoes', $data);
+       
+
+    }
+
     public function doar(Request $request){
 
+         //validar dados
+         $request->validate([
+            'instituicao' =>'required',
+            'valor'=>'required|'
+        ]);
         
 
         //pegar usuario da sessao

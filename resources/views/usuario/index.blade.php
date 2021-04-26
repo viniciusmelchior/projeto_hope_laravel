@@ -98,7 +98,7 @@
                         @endif 
                             <div class="mt-3">
                                 <h3>{{ $LoggedUserInfo->name }}</h3>
-                                <a href="">Minhas Doações</a>
+                                <a href="{{route('minhas-doacoes')}}">Minhas Doações</a>
                                 <a href="{{route('form-doacao')}}">Doar</a>
                                 <a href="{{route('instituicao-form')}}">Cadastrar Instituição</a>
                                 <a href="">Deletar Conta</a>
@@ -159,11 +159,12 @@
                                         <h5>{{$doacao->instituicoes->nome}}</h5>
                                     </div>
                                     <div class="col md-9 text-secondary">
-                                        R$ {{$doacao->valor}} ///
-                                        R$ {{$doacao->created_at}}
+                                        R$ {{$doacao->valor}} |
+                                        em: {{$doacao->created_at}}
                                     </div>
                                 </div>   
                                 @endforeach
+                                <a href="{{route('minhas-doacoes')}}" class="btn btn-primary mt-2">Ver Todas</a>
                             </div>
                         </div>
                     </div>

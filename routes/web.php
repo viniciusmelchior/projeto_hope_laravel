@@ -55,6 +55,7 @@ Route::post('/instituicao-cadastro', [InstituicaoController::class, 'cadastrar']
 //Rotas Doacoes
 Route::get('/doacao-form', [DoacaoController::class, 'index'])->name('form-doacao');
 Route::post('/doar', [DoacaoController::class, 'doar'])->name('doar');
+Route::get('/minhas-doacoes', [DoacaoController::class, 'minhasDoacoes'])->name('minhas-doacoes');
 
 //ROTAS ADMIN
 

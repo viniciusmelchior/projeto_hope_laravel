@@ -19,6 +19,9 @@
                 <div class="input-div">
                     <label for="valor">Valor da Doação</label>
                     <input type="number" name="valor" id="">
+                    <div>
+                        <span class="alerta-erro-span">@error('valor'){{ $message }}@enderror</span>
+                    </div>
                 </div>
                 <div>
                     <input type="submit" value="Confirmar Doação" class="btn btn-principal">
