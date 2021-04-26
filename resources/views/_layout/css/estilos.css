@@ -1,0 +1,201 @@
+/*estilos gerais*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container-home{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#menu {
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 25px 0 25px 0; 
+    width: 100%;
+}
+
+#menu a {
+    text-decoration: none;
+    color: rgba(27, 27, 27, 0.918);
+}
+
+#menu a:hover {
+    color: #b3e0c0
+}
+
+#input-busca{
+    margin-left: 75%;
+    height: 22px;
+    top: 39px;
+    position: absolute;
+    padding-left: 12px;
+}
+
+.logo {
+    position: absolute;
+    top: 16px;
+    width: 132px;
+    margin-left: 202px;
+}
+
+#menu hr{
+    border-top-style: none;
+    position: relative;
+    top: -14px;
+    margin-right: 340px;
+    margin-left: 287px;
+}
+
+ul {
+    text-align: right;
+    padding-right: 22%;
+}
+
+li {
+    display: inline-block;
+    margin-right: 70px;
+    font-size: 22px;
+}
+
+.conj-img {
+    margin: 50px 200px 0px 168px;
+    display: flex;
+}
+
+.miniatura {
+    display: inline-block;
+    padding-left: 70px;
+    margin-right: 3em;
+}
+
+.text-miniatura {
+    font-family: 'Balsamiq Sans', cursive;
+    width: 190px;
+}
+
+.miniatura img {
+    width: 190px;
+}
+
+.imgrandom img {
+    height: 219px;
+    margin-left: 300px;
+    width: 681px;
+}
+
+.list-info-empresa {
+    padding-right: 0px;
+    display: grid;
+    margin-top: 61px;
+    margin-right: -20px;
+    line-height: 48px;
+    text-align: left;
+    color: #4d4d4d;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.list-info-empresa li:first-child {
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(78, 70, 70)
+}
+
+.icones {
+    margin-top: 245px;
+    position: absolute;
+    right: 0;
+    margin-right: 90px;
+}
+
+.icones img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.logo-rodape {
+    position: absolute;
+    right: 0px;
+    margin-right: 93px;
+    margin-top: 30px
+}
+
+#img-rodape {
+    display: inline-block;
+}
+
+/*Doe Já*/
+
+.main-doe-ja{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tela-cadastro-login{
+    width: 50%;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    text-align: center;
+}
+
+
+#doacao {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+#doacao select {
+    cursor: pointer;
+}
+
+#doacao legend {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-style: italic;
+}
+
+
+/*Parcerias*/
+
+.container-parcerias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.parceiros {
+    margin-top: 21px;
+}
+
+/*Sobre nós*/
+
+#mensagem {
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+#mensagem h2 {
+    text-align: center;
+    font-size: 27px;
+    text-decoration: underline; 
+    color: #79c68d;
+}
+
+#mensagem p {
+    margin: 50px 100px 0px 100px;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+#mensagem h4 {
+    /*margin: 30px 50px 50px 50px;*/
+    margin: 30px 100px 30px 100px;
+    text-shadow: 1px 1px 3px #3a3333;
+}
