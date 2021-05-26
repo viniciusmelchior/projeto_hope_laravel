@@ -30,18 +30,15 @@ class DoacaoController extends Controller
 
     return view('doacao.minhas-doacoes', $data);
        
-
     }
 
     public function doar(Request $request){
-
          //validar dados
          $request->validate([
             'instituicao' =>'required',
             'valor'=>'required|'
         ]);
         
-
         //pegar usuario da sessao
         $user = User::where('id','=',session('LoggedUser'))->first();
         $doador =$user->id;
@@ -50,8 +47,6 @@ class DoacaoController extends Controller
         $doacao->doador = $doador;
         $doacao->instituicao = $request->instituicao;
         $doacao->valor = $request->valor;
-
-        //dd($doacao);
         
         //atualizar dados no banco
 

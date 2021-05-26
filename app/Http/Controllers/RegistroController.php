@@ -44,7 +44,6 @@ class RegistroController extends Controller
        
         //salva usuario no banco, faz login e direciona pro painel dele
         
-
         return redirect()->route('usuario-painel');
     }
 }

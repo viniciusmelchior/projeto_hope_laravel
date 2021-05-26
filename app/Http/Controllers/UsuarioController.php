@@ -17,7 +17,7 @@ class UsuarioController extends Controller
             $user = User::where('id','=',session('LoggedUser'))->first();
             $doacoes = Doacao::where('doador', $user->id)->get();
             $data = [
-                'LoggedUserInfo' =>$user,
+                'LoggedUserInfo' => $user,
                 'doacoes' => $doacoes
             ];
         }
@@ -38,7 +38,7 @@ class UsuarioController extends Controller
 
         $user = User::where('id','=',session('LoggedUser'))->first();
         $data = [
-            'LoggedUserInfo' =>$user,
+            'LoggedUserInfo' => $user,
             'title' => 'Editar Usuário'
         ];
         return view('usuario.form-usuario-editar', $data);
