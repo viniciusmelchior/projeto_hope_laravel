@@ -160,7 +160,7 @@
                                     </div>
                                     <div class="col md-9 text-secondary">
                                         R$ {{$doacao->valor}} |
-                                        em: {{$doacao->created_at}}
+                                        em: {{$doacao->created_at->format('d/m/Y')}}
                                     </div>
                                 </div>   
                                 @endforeach

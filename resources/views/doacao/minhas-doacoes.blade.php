@@ -19,7 +19,7 @@
           <tr>
             <th scope="col">Instituição De Destino</th>
             <th scope="col">Valor</th>
-            <th scope="col">Data/Horário</th>
+            <th scope="col">Data</th>
           </tr>
         </thead>
         <tbody>
@@ -27,7 +27,7 @@
           <tr>
             <td>{{$doacao->instituicoes->nome}}</td>
             <td>R$ {{$doacao->valor}}</td>
-            <td>{{$doacao->created_at}}</td>
+            <td>{{$doacao->created_at->format('d/m/Y')}}</td>
           </tr>
           @endforeach
         </tbody>
