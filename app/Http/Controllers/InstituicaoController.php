@@ -15,7 +15,18 @@ class InstituicaoController extends Controller
 
     public function cadastrar(Request $request){
 
-        //dd($request->all());
+        //validar dados
+        $request->validate([
+            'nome' => 'required',
+            'cnpj' => 'required',
+            'descricao' => 'required'
+        ],
+        [
+            'nome.required' => 'O campo nome é obrigatorio',
+            'cnpj.required' => 'O campo CNPJ é obrigatorio',
+            'responsavel.required' => 'O campo responsável é obrigatorio',
+            'descricao.required' => 'O campo descricao é obrigatorio'
+        ]);
 
         //pegar id do responsável pela sessão
         $user = User::where('id','=',session('LoggedUser'))->first();

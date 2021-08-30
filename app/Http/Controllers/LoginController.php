@@ -15,6 +15,11 @@ class LoginController extends Controller
         $request->validate([
             'email'=>'required|email',
             'password'=>'required|min:5|max:12'
+        ],[
+            'email.required' => 'O campo email é obrigatório',
+            'password.required' => 'O campo senha é obrigatório',
+            'password.min' => 'O campo senha deve ter no mínimo 5 caracteres',
+            'password.max' => 'O campo senha deve ter no maximo 12 caracteres'
         ]);
 
         $user = User::where('email','=',$request->email)->first();
@@ -27,10 +32,10 @@ class LoginController extends Controller
 
 
             } else {
-                return back()->with('fail', 'invalid password');
+                return back()->with('fail', 'Email e/ou senha inválidos');
             }
         } else {
-            return back()->with('fail', 'nenhuma conta vinculada a este email');
+            return back()->with('fail', 'Email e/ou senha inválidos');
         }
     }
 

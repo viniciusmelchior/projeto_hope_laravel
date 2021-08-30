@@ -36,7 +36,12 @@ class DoacaoController extends Controller
          //validar dados
          $request->validate([
             'instituicao' =>'required',
-            'valor'=>'required|'
+            'valor'=>'required|numeric|min:1'
+         ],
+        [
+            'instituicao.required' =>'Selecione uma instituição de destino',
+            'valor.required'=>'Insira um valor de transferência',
+            'valor.min'=>'Valor mínimo R$ 1'
         ]);
         
         //pegar usuario da sessao
